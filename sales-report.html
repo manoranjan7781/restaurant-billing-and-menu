@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geetha Stores - Sales Report</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🍽️ Geetha Stores</h1>
+        <p class="tagline">Monthly Sales Report</p>
+        <nav>
+            <a href="index.html">Menu & Billing</a>
+            <a href="manage-menu.html">Manage Menu</a>
+            <a href="sales-report.html">Sales Report</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="filter-section">
+            <h2>Filter by Month</h2>
+            <div class="filter-controls">
+                <label for="month-select">Month:</label>
+                <select id="month-select">
+                    <option value="">All Months</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <label for="year-select">Year:</label>
+                <select id="year-select">
+                    <!-- Years will be populated dynamically -->
+                </select>
+                <button id="filter-btn" class="btn btn-primary">Apply Filter</button>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <div class="summary-card">
+                <h3>Total Orders</h3>
+                <p id="total-orders">0</p>
+            </div>
+            <div class="summary-card">
+                <h3>Total Revenue</h3>
+                <p id="total-revenue">₹0.00</p>
+            </div>
+        </div>
+
+        <div class="report-section">
+            <h2>Sales Report</h2>
+            <div id="report-table-container">
+                <table id="report-table" class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Order ID</th>
+                            <th>Items</th>
+                            <th>Total Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="report-tbody">
+                        <tr>
+                            <td colspan="4" class="no-data">No sales data available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/sales-report.js"></script>
+</body>
+</html>
+

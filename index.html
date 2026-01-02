@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geetha Stores - Restaurant Menu & Billing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🍽️ Geetha Stores</h1>
+        <p class="tagline">Authentic South Indian Cuisine</p>
+        <nav>
+            <a href="index.html">Menu & Billing</a>
+            <a href="manage-menu.html">Manage Menu</a>
+            <a href="sales-report.html">Sales Report</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="menu-section">
+            <h2>Menu</h2>
+            <div id="menu-grid" class="menu-grid">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-total">
+                <strong>Total: ₹<span id="cart-total">0.00</span></strong>
+            </div>
+            <div class="cart-actions">
+                <button id="pay-now-btn" class="btn btn-primary" disabled>Pay Now</button>
+                <button id="print-bill-btn" class="btn btn-secondary" disabled>Print Bill</button>
+                <button id="clear-cart-btn" class="btn btn-danger" disabled>Clear Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Scan to Pay</h2>
+            <div class="qr-container">
+                <img id="qr-code-image" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=UPI:restaurant@upi" alt="UPI QR Code">
+            </div>
+            <p>Scan this QR code to complete payment</p>
+            <button id="payment-complete-btn" class="btn btn-success">Payment Complete</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

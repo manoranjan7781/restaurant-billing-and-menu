@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geetha Stores - Manage Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🍽️ Geetha Stores</h1>
+        <p class="tagline">Menu Management</p>
+        <nav>
+            <a href="index.html">Menu & Billing</a>
+            <a href="manage-menu.html">Manage Menu</a>
+            <a href="sales-report.html">Sales Report</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="manage-section">
+            <h2>Add New Menu Item</h2>
+            <form id="menu-form" class="menu-form">
+                <input type="hidden" id="item-id">
+                <div class="form-group">
+                    <label for="item-name">Item Name:</label>
+                    <input type="text" id="item-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-price">Price (₹):</label>
+                    <input type="number" id="item-price" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-image">Image URL:</label>
+                    <input type="url" id="item-image" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="save-btn" class="btn btn-primary">Add Item</button>
+                    <button type="button" id="cancel-btn" class="btn btn-secondary" style="display:none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="menu-list-section">
+            <h2>Menu Items</h2>
+            <div id="menu-list" class="menu-list">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/menu-manager.js"></script>
+</body>
+</html>
+
